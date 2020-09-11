@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 30px;
+}
+
+h1 {
+    flex-grow: 1;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+}
+
+h2 {
+    font-family: 'Open Sans', sans-serif;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+.navlinks {
+    list-style-type: none;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 200;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navlink > a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+}
+
+a {
+    color: grey;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.navlink > a:hover {
+    text-decoration: underline;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    box-sizing: border-box;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.child {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    padding-top: 80px;
+}
+
+.lefter, .righter {
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+.padding-righter {
+    padding-left: 50px;
+    padding-right: 15px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.footer-style {
+    padding-top: 50px;
+    padding-bottom: 15px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.grey {
+    color: #333333;
+    font-size: 12px;
+}
+
