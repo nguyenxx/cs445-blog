@@ -91,3 +91,7 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+ul {
+    font-family: 'Open Sans', sans-serif;
+}
