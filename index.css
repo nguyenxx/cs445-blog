@@ -20,7 +20,7 @@ h1 {
     font-weight: 600;
 }
 
-h2 {
+h2, pre {
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -104,4 +104,6 @@ img {
     color: #333333;
     font-size: 12px;
 }
+
+
 

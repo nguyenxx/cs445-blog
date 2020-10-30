@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CS347: Blog</title>
+    <link rel="stylesheet" href="blog.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <h1>CS347 Blog: Susie Nguyen</h1>
+        <ul class="navlinks">
+            <li class="navlink"><a href="index.html">Blog</a></li>
+            <li class="navlink"><a href="about.html">About</a></li>
+            <li class="navlink"><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2 style="margin-bottom: 0;">React for Dummies: Fundamentals</h2>
+        <p class="grey">Last Updated: October 29, 2020 </p>
+        <p>In preparation for the React App project, in addition to watching
+            the lecture videos, I decided to read some articles and summarize the fundamental
+            React.js concepts, I've learned so far.
+        </p>
+        <h3>Components, Props, States</h3>
+        <p>According to the article <a href="https://medium.com/@kellyharrop/react-for-dummies-c56a94063bfe" target="_blank">"React for Dummies" </a>
+        by Kelly Harrop, <b>components</b> are the building blocks of your React app. You form bigger components
+        by putting together smaller components. According to the article 
+        <a href="https://www.freecodecamp.org/news/all-the-fundamental-react-js-concepts-jammed-into-this-single-medium-article-c83f9b53eac2/?ref=hackernoon.com" target="_blank">All the fundamental React.js concepts, jammed into this one article</a>
+        by Samer Buna, a component name starts with a capital letter since lowercase case names are 
+        reserved for HTML elements. The ReactDOM will ignore the functioin, if that is the case.</p>
+        <p>
+        Just like HTML elements, every component in React has a list of attributes, often referred to as
+        <b>props</b> - the data that came from the parent to the child. On the other hand, if the data that is
+        owned and managed by the child that is called a <b>state</b>.
+        In our lecture, we created a Swatch component for 
+        our Pal app in the swatch.js file. We added to our Swatch function a parameter props,
+        which is an object of all the data that gets sent. In our case, we recieved a color object (props.color).
+        </p>
+        <h3>JSX</h3>
+        <p>According to the document <a href="https://reactnative.dev/docs/intro-react/" target="_blank">React Fundamentals</a> by React Native,
+        <b>JSX</b> is a syntax that lets you write elements inside JavaScript. If you want to write a JavaScript expression inside
+        a JSX section, you will need to use that expression inside the curly braces to make it work. You can also use the
+        self-closing form of the tag, if there are no children. Kelly Harrop describes JSX as something that "looks like HTML
+        in your JS file". Kelly says the most obvious difference is the use of className insread of class
+        when defining your elements. The use of the JSX syntax has also been
+        demonstrated in our lecture video.
+        </p>
+        <h3>Events in React</h3>
+        <p> According to a <a href="https://reactjs.org/docs/handling-events.html">React</a> document, there are two significant differences 
+            from the way we handle events inside React elements vs. with the DOM API: </p>
+            <ul>
+                <li>First, all React element attributes are names using <b>camelCase</b>
+                    rather than <b>lowercase</b>.</li>
+                <li>Secondly, JavaScript function reference is passed as the <b>event handler</b>,
+                    rather than a <b>string</b>
+                </li> 
+            </ul>
+                <p style="text-align: center;"><b>HTML vs. React</b></p>
+                <pre>
+                    &lt;button onclick="activateLasers()"&gt;
+                    Activate Lasers
+                    &lt;/button&gt;
+                </pre>
+                <pre>
+                    &lt;button onclick={activateLasers}&gt;
+                    Activate Lasers
+                    &lt;/button&gt;
+                </pre>
+           
+        <p>
+        Another difference that the document notes is that you cannot 
+        return false to prevent default behavior in React. 
+        You must call preventDefault explicitly.
+        </p>
+    </main>
+    <footer>
+        <p class="footer-style">Created by: Susie Nguyen | Contact information: <a href="mailto:nguyenxx@dukes.jmu.edu"
+                target="_blank">nguyenxx@dukes.jmu.edu</a> | LinkedIn: <a
+                href="https://www.linkedin.com/in/susie-nguyen/" target="_blank">linkedin.com/in/susie-nguyen/</a></p>
+    </footer>
+</body>
+
+</html>
