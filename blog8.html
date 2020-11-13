@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CS347: Blog</title>
+    <link rel="stylesheet" href="blog.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 780px;
+            height: 480px;
+        }
+        ul li {
+            line-height: 2em;
+            font-family: 'Open Sans', sans-serif;
+        }
+        li {
+            padding-bottom: 0.5em;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <h1>CS347 Blog: Susie Nguyen</h1>
+        <ul class="navlinks">
+            <li class="navlink"><a href="index.html">Blog</a></li>
+            <li class="navlink"><a href="about.html">About</a></li>
+            <li class="navlink"><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2 style="margin-bottom: 0;">Vulnerabilities
+            associated with cookiess</h2>
+        <p class="grey">Last Updated: November 13, 2020 </p>
+        <img src="images/blog8.png">
+        <p> In last week's blog post, I debunked some myths 
+        about the HTTP cookies and proved them false. If most people who utilize cookies
+        have good intentions, then why do they often have a bad reputation?
+        </p>
+        <p> In this week's blog, I am going to talk about certain examples of
+        vulnerabilities associated with cookies.
+        </p>
+        <h3>Man-in-the-middle</h3>
+        <p> According to Harshal Patil in his <a href="https://blog.webf.zone/ultimate-guide-to-http-cookies-2aa3e083dbae">"Ultimate Guide to HTTP Cookies"</a>
+        blog, people mistakenly attribute data stealing to cookies because of the man-in-the-middle 
+        attack. In fact, this attack has little to do with cookies but more so with HTTP and HTTPS.
+        The middle entities simply read the cookies, so if a data stored in cookies travels via HTTP 
+        and are read by the hacker, then the hacker can fake as another user. 
+        </p>
+        <h3>How to protect yourself from a MID attack?</h3>
+        <p>In order to protect yourself from this type of attack, you can do the following:</p>
+        <ul>
+            <li>Make sure “HTTPS” — with the S — is always in the URL bar of the websites you visit. With 
+                HTTPS, man-in-the-middle attack is less likely to happen. 
+            </li>
+            <li>Be on the lookout for any suspicious or phising emails from attackers
+                asking you to update your login credentials such as updating your password.
+            </li>
+            <li> According to Norton Security, you should also make sure your home Wi-Fi network is
+                secure.
+            </li>
+            <li>Do not connect to public Wi-Fi routers directly, if possible.</li>
+        </ul>
+        <h3>CSRF - Cross Site Request Forgery</h3>
+        <p> Another attack that utilizes cookies is called Cross Site Request Forgery. This is an attack where
+            the attacker tricks the user's computer into running code that is perceived as trustworthy due to
+            the fact that it appears to belong to the server; this allows the attacker to 
+            obtain a copy of the cookie or perform other operations.
+            According to Harshal Patil, in this scenario the attacker simply exploits the fact that cookies 
+            are sent to server for each and every request.</p> 
+            <p> To understand this better, Harshap Patil gives an example scenario and asks us to imagine that a user is visiting two websites: 
+            one is a legitimate bank 
+            website and the other one is some fake website created by the attacker. Assuming the user has already logged into bank website
+            and is trying to navigate to the attacker's website, it will try to load image at given address. 
+            As a result, the browser could send the cookie for that domain, even if the request is issued from some other website (cross-site).
+            Harshap Patil says: "In short, evil website made a cross-site request to other domain with an intention to cause harm. Such attack is known as cross-site request forgery (CSRF).
+            CSRF attacks happen very silently and involves visiting multiple website at once; thus it is very difficult to track down CSRF attach."</p>
+        <h3>How to protect against CSRF?</h3>
+        <p> According to Harshal Patil, a simple solution to CSRF attack is to use Referer Header.
+            Referrer header tells server from where the request has originate. In his example, mybank.com server can 
+            check Referer header. If the request is coming from evilwebsite.com, then Referer header will contain that 
+            value and server can simply reject that request. </p>
+        <p>In conclusion, although cookies are often a topic of a debate and may carry a bad reputation, 
+        you can be assured cookies are designed with good intentions. 
+        With good measures cookies can help build strong session management experience for your web applications 
+        without compromising on security. If you are still feel uneasy about them then take the right 
+        measures and precaution any attacks on the web in general.
+        </p>
+        <h3>Sources: </h3>
+        <ul>
+            <li>
+                <a href="https://us.norton.com/internetsecurity-wifi-what-is-a-man-in-the-middle-attack.html"
+                    target="_blank">https://us.norton.com/internetsecurity-wifi-what-is-a-man-in-the-middle-attack.html </a>
+            </li>
+            <li>
+                <a href="https://doubleoctopus.com/security-wiki/threats-and-tools/session-hijacking/"
+                    target="_blank">https://doubleoctopus.com/security-wiki/threats-and-tools/session-hijacking/</a>
+            </li>
+            <li>
+                <a href="https://blog.webf.zone/ultimate-guide-to-http-cookies-2aa3e083dbae "
+                    target="_blank">https://blog.webf.zone/ultimate-guide-to-http-cookies-2aa3e083dbae </a>
+            </li>
+        </ul>
+    </main>
+    <footer>
+        <p class="footer-style">Created by: Susie Nguyen | Contact information: <a href="mailto:nguyenxx@dukes.jmu.edu"
+                target="_blank">nguyenxx@dukes.jmu.edu</a> | LinkedIn: <a
+                href="https://www.linkedin.com/in/susie-nguyen/" target="_blank">linkedin.com/in/susie-nguyen/</a></p>
+    </footer>
+</body>
+
+</html>
